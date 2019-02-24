@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">YOUR DB URL</property>
+        <property name="hibernate.connection.username">USERNAME</property>
+        <property name="hibernate.connection.password">PASSWORD</property>
+        <property name="hibernate.connection.pool_size">5</property>
+        <property name="show_sql">true</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <mapping class="com.job.finalproject.finalproject.persistance.entity.Reviewer" />
+        <mapping class="com.job.finalproject.finalproject.persistance.entity.Director" />
+        <mapping class="com.job.finalproject.finalproject.persistance.entity.Movie" />
+        <mapping class="com.job.finalproject.finalproject.persistance.entity.Genre" />
+        <mapping class="com.job.finalproject.finalproject.persistance.entity.Rating" />
+        <mapping class="com.job.finalproject.finalproject.persistance.entity.TitleType" />
+
+
+    </session-factory>
+</hibernate-configuration>
